@@ -1,0 +1,77 @@
+:root {
+  color-scheme: light dark;
+  font: 14px system-ui, sans-serif;
+}
+
+body {
+  min-width: 220px;
+  margin: 0;
+  padding: 14px 16px;
+  color: CanvasText;
+  background: Canvas;
+}
+
+.site {
+  margin: 0 0 10px;
+  font-size: 12px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input {
+  appearance: none;
+  width: 36px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid ButtonText;
+  border-radius: 12px;
+  color: ButtonText;
+  background: ButtonFace;
+  cursor: pointer;
+}
+
+input::before {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 3px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+input:checked {
+  border-color: LinkText;
+  color: Canvas;
+  background: LinkText;
+}
+
+input:checked::before {
+  transform: translateX(16px);
+}
+
+input:focus-visible {
+  outline: 2px solid LinkText;
+  outline-offset: 3px;
+}
+
+input:disabled {
+  opacity: .6;
+  cursor: default;
+}
+
+#status {
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+
+#status:empty {
+  margin: 0;
+}

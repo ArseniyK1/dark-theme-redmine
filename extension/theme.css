@@ -1,0 +1,250 @@
+html[data-simplex-dark] {
+  color-scheme: dark;
+  --simplex-bg: #1f1f1f;
+  --simplex-surface: #262626;
+  --simplex-raised: #303030;
+  --simplex-hover: #404040;
+  --simplex-selected: #25466a;
+  --simplex-text: #f0f0f0;
+  --simplex-muted: #b3b3b3;
+  --simplex-border: #484848;
+  --simplex-control-border: #858585;
+  --simplex-link: #85baf5;
+  --simplex-visited: #c9a8ed;
+  --simplex-focus: #80b5f4;
+  --simplex-success: #82d6a5;
+  --simplex-warning: #f1c979;
+  --simplex-danger: #ffaaaa;
+  background-color: var(--simplex-bg);
+  color: var(--simplex-text);
+}
+
+html[data-simplex-dark] :is(body, #wrapper, #main, #content, #footer) {
+  background-color: var(--simplex-bg) !important;
+  color: var(--simplex-text) !important;
+  border-color: var(--simplex-border) !important;
+}
+
+html[data-simplex-dark] :is(
+  #login-form, .box, div.issue,
+  .drdn-content, #context-menu ul, .ui-widget-content, .ui-autocomplete,
+  .tribute-container ul, .jstBlock .jstEditor, .wiki pre
+) {
+  background-color: var(--simplex-surface) !important;
+  color: var(--simplex-text) !important;
+  border-color: var(--simplex-border) !important;
+}
+
+html[data-simplex-dark] :is(
+  #header, #top-menu, #sidebar,
+  #project-jump .drdn-trigger,
+  #content .tabs ul li a, table.list th, .table-list-header, table.list tr.group > td,
+  table.cal thead th, table.cal td.week-number, .gantt_hdr[style*="background"],
+  .ui-widget-header, .ui-state-default, .ui-widget-content .ui-state-default,
+  .pagination .current, .pagination a, .wiki table th, .wiki code
+) {
+  background-color: var(--simplex-raised) !important;
+  color: var(--simplex-text) !important;
+  border-color: var(--simplex-border) !important;
+}
+
+html[data-simplex-dark] :is(
+  h1, h2, h3, h4, legend, label, fieldset, hr, table.list, .table-list,
+  table.list td, .wiki table td, #content .tabs ul, .jstTabs, .wiki blockquote,
+  #issue-changesets, .journal, #footer, .splitcontentleft, .splitcontentright
+) {
+  border-color: var(--simplex-border) !important;
+}
+
+html[data-simplex-dark] :is(h1, h2, h3, h4, legend, #sidebar label, .attributes .label) {
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] a:any-link {
+  color: var(--simplex-link) !important;
+}
+
+html[data-simplex-dark] .wiki a:visited {
+  color: var(--simplex-visited) !important;
+}
+
+html[data-simplex-dark] :is(.author, .journal .details, .pagination .items, .description .meta,
+  #checklist .is-done-checklist-item, #checklist_items .is-done-checklist-item, .ui-state-disabled) {
+  color: var(--simplex-muted) !important;
+}
+
+html[data-simplex-dark] :is(
+  input:not([type="hidden"], [type="checkbox"], [type="radio"], [type="image"], [type="color"]),
+  select, textarea, button, .jstElements button
+) {
+  background-color: var(--simplex-raised) !important;
+  border-color: var(--simplex-control-border) !important;
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] :is(input, textarea)::placeholder {
+  color: var(--simplex-muted);
+  opacity: 1;
+}
+
+html[data-simplex-dark] :is(input[type="checkbox"], input[type="radio"]) {
+  accent-color: var(--simplex-focus);
+}
+
+html[data-simplex-dark] :is(input, select, textarea, button):disabled {
+  color: var(--simplex-muted) !important;
+  opacity: .75;
+}
+
+html[data-simplex-dark] :focus-visible {
+  outline: 2px solid var(--simplex-focus) !important;
+  outline-offset: 2px;
+}
+
+html[data-simplex-dark] :is(table.list tbody tr, .table-list-cell, .odd, .even) {
+  background-color: var(--simplex-bg) !important;
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] :is(table.list tbody tr:nth-child(even), .even) {
+  background-color: var(--simplex-surface) !important;
+}
+
+html[data-simplex-dark] :is(
+  #main-menu a.selected,
+  table.list tbody tr:hover, .table-list-row:hover .table-list-cell, #main-menu a:hover,
+  #context-menu a:hover, .drdn-items a:hover, .ui-menu .ui-state-active,
+  .ui-widget-content .ui-state-hover, .tribute-container li.highlight,
+  button:not(:disabled):hover, input[type="submit"]:not(:disabled):hover
+) {
+  background-color: var(--simplex-hover) !important;
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] :is(table.list tbody tr.context-menu-selection,
+  table.list tbody tr.context-menu-selection:hover, #content .tabs ul li a.selected,
+  .ui-datepicker .ui-state-active) {
+  background-color: var(--simplex-selected) !important;
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] :is(.flash.notice, .ui-state-highlight) {
+  background-color: #213b2d !important;
+  border-color: #59866a !important;
+  color: var(--simplex-success) !important;
+}
+
+html[data-simplex-dark] :is(.flash.warning, .nodata) {
+  background-color: #40331e !important;
+  border-color: #927745 !important;
+  color: var(--simplex-warning) !important;
+}
+
+html[data-simplex-dark] :is(.flash.error, #errorExplanation, .ui-state-error) {
+  background-color: #45292d !important;
+  border-color: #a56368 !important;
+  color: var(--simplex-danger) !important;
+}
+
+html[data-simplex-dark] :is(label.error, .required, .overdue, tr.overdue td.due_date,
+  .invalid .checklist-edit-box input) {
+  color: var(--simplex-danger) !important;
+}
+
+html[data-simplex-dark] .invalid .checklist-edit-box input {
+  border-color: var(--simplex-danger) !important;
+}
+
+html[data-simplex-dark] .checklist-edit-reset-button {
+  color: var(--simplex-link) !important;
+}
+
+html[data-simplex-dark] :is(.ui-dialog .ui-dialog-titlebar, .ui-button, .ui-datepicker .ui-widget-header) {
+  background-image: none !important;
+}
+
+html[data-simplex-dark] table.list tr.group :is(.totals, a.toggle-all) {
+  color: var(--simplex-muted) !important;
+}
+
+html[data-simplex-dark] table.list tr.group .totals .value {
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] table.list tr.group .count {
+  background-color: var(--simplex-selected) !important;
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] :is(table.cal, table.cal td, .gantt_hdr) {
+  border-color: var(--simplex-border) !important;
+}
+
+html[data-simplex-dark] table.cal td.nwday:not(.odd),
+html[data-simplex-dark] .gantt_hdr.nwday {
+  background-color: var(--simplex-surface) !important;
+  color: var(--simplex-muted) !important;
+}
+
+html[data-simplex-dark] table.cal tbody td.today {
+  background-color: var(--simplex-selected) !important;
+  color: var(--simplex-text) !important;
+}
+
+/* Redmine Dashboard 2 */
+html[data-simplex-dark] :is(#rdb, #rdb-board, .rdb-container, .rdb-card-dialog-box) {
+  background-color: var(--simplex-surface) !important;
+  border-color: var(--simplex-border) !important;
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] :is(#rdb-header, #rdb-board .rdb-headers, .rdb-group-header, .rdb-card, .rdb-compact) {
+  background-color: var(--simplex-raised) !important;
+  border-color: var(--simplex-border) !important;
+  color: var(--simplex-text) !important;
+}
+
+html[data-simplex-dark] #rdb :is(.rdb-column, #rdb-refresh, .rdb-card-title a, .rdb-compact-title a) {
+  border-color: var(--simplex-border) !important;
+}
+
+html[data-simplex-dark] :is(#rdb-copyright, .rdb-headers .rdb-column span, .rdb-column-head,
+  .rdb-group-header span, .rdb-property, .rdb-compact-property) {
+  color: var(--simplex-muted) !important;
+}
+
+html[data-simplex-dark] :is(.rdb-card-progress, .rdb-compact-progress) {
+  background-color: var(--simplex-border) !important;
+}
+
+html[data-simplex-dark] :is(.rdb-card-progress-bar, .rdb-compact-progress-bar) {
+  background-color: var(--simplex-success) !important;
+}
+
+html[data-simplex-dark] :is(
+  #rdb #rdb-refresh:hover, #rdb .rdb-menu-link:hover, .rdb-menu-active .rdb-menu-link,
+  .rdb-card-title > a:hover, .rdb-group-header a:hover, .rdb-card-dialog-box li a:hover,
+  .rdb-issue-menu-progress li a:hover, .rdb-list > ul > li > a:hover,
+  .rdb-list .rdb-multicheck a:hover, .rdb-list .rdb-multicheck a.rdb-checkbox-link:hover ~ a
+) {
+  background-color: var(--simplex-hover) !important;
+}
+
+html[data-simplex-dark] #rdb .rdb-column-drop-active {
+  background-color: var(--simplex-hover) !important;
+}
+
+html[data-simplex-dark] #rdb .rdb-column-drop-hover {
+  background-color: var(--simplex-selected) !important;
+}
+
+html[data-simplex-dark] .rdb-overdue :is(.rdb-card, .rdb-compact),
+html[data-simplex-dark] #rdb-errors .rdb-error {
+  border-color: var(--simplex-danger) !important;
+}
+
+html[data-simplex-dark] #rdb-errors .rdb-error {
+  background-color: #45292d !important;
+  color: var(--simplex-danger) !important;
+  text-shadow: none;
+}
